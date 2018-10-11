@@ -1,0 +1,5 @@
+/jamp/.vscode
+
+/jamp/package-lock.json
+/jamp/node-modules/*
+
