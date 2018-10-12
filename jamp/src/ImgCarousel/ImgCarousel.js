@@ -99,6 +99,16 @@ class Example extends Component {
               .carousel-height {
                 height: 700px;
               }
+              .carousel-fade .carousel-item {
+                display: block;
+                position: absolute;
+                opacity: 0;
+                transition: opacity 1.5s ease-in-out;
+              }
+              .carousel-fade .carousel-item.active {
+                opacity: 1;
+                position: relative;
+              }
               `
           }
         </style>
@@ -107,8 +117,10 @@ class Example extends Component {
         next={this.next}
         previous={this.previous}
         pause={false}
-        interval={4000}
-        className="carousel-height"
+        interval={7000}
+        ride="carousel"
+        slide={false}
+        className="carousel-height carousel-fade"
       >
         <CarouselIndicators items={items} activeIndex={activeIndex} onClickHandler={this.goToIndex} />
         {slides}
